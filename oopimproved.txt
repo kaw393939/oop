@@ -1,0 +1,32 @@
+<?php
+
+  $obj = new main();
+
+  class main {
+    public function __construct() {
+       $text = "<h1>Print Function Demonstration</h1>";
+       stringFunctions::printThis($text);
+       $text = "Text I printed";
+       stringFunctions::printThis($text);
+       $text = "<hr>";
+       stringFunctions::printThis($text);
+       $text = "<h1>Array Function Demonstration</h1>";
+       stringFunctions::printThis($text);
+       $myArray = array(1,2,3,4,5,6,7);
+       arrayFunctions::printArray($myArray);
+       $text = "<hr>";	
+       stringFunctions::printThis($text);
+    }
+  }
+  class arrayFunctions {
+     static public function printArray($array) {
+        print_r($array);
+     }
+  }
+  class stringFunctions {
+     static public function printThis($inputText) {
+        print($inputText);
+     }
+  }
+
+?>
